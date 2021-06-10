@@ -4,12 +4,11 @@ import {ListGroup} from "react-bootstrap";
 
 export class Ex6 extends React.Component {
     componentDidMount() {
-        axios.get('https://social-network.samuraijs.com/api/1.0/users')
-            .then(response => this.props.setUsers(response.data.items))
+        axios.get('https://jsonplaceholder.typicode.com/users')
+            .then(response => this.props.setUsers(response.data))
     }
 
     render() {
-        console.log(this.props.users)
         return (
             <div>
                 <h5>Список пользаков</h5>
